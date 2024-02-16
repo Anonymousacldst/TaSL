@@ -34,7 +34,7 @@ We conducted experiments on four different student models:
 
 For LLaMA-7B, we use [LoRA](https://github.com/microsoft/LoRA) to accelerate the speed of fine-tuning process. At the end of training, the fine-tuned weights will be stored in `$checkpoint_files`. And the importance distribution of skill units will be stored in `$ipt_file`.
 
-The code then automatically implements the fine-grained model averaging strategy (`fine_grained_avg.py`).
+The code then automatically implements the fine-grained skill consolidation strategy (`skill_consolidation.py`).
 
 
 ## Step 3. Inference
@@ -46,11 +46,11 @@ Three metrics are used to measure the performance of our model for Continual Lea
 ```
 ### Forward Transfer (**FWT**)
 ```ruby
-./scripts/run_generate_FWT.sh
+./scripts/run_generate_fwt.sh
 ```
 ### Backward Transfer (**BWT**)
 ```ruby
-./scripts/run_generate_BWT.sh
+./scripts/run_generate_bwt.sh
 ```
 After inference, the generated prediction results will be stored at `\output` folder. 
 
@@ -59,8 +59,8 @@ After inference, the generated prediction results will be stored at `\output` fo
 Then you can calculate three metrics by running
 ```ruby
 ./eval_avgJGA.py
-./eval_FWT.py
-./eval_BWT.py
+./eval_fwt.py
+./eval_bwt.py
 ```
 
 
