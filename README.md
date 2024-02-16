@@ -24,11 +24,11 @@ Then replace the corresponding files in the Transformers package with `trainer.p
 We conducted experiments on four different student models:
 ### LLaMA-7B (`finetune_ContinualDST_LLaMA7B.py`)
 ```ruby
-./scripts/run_train_LLaMA7B.sh
+./scripts/run_train_TaSL_LLaMA7B.sh
 ```
 ### T5 Series Models (`finetune_ContinualDST_T5XL.py`)
 ```ruby
-./scripts/run_train_t5.sh
+./scripts/run_train_TaSL_t5.sh
 ```
 * --model_path: replace the position of various t5 models.
 
@@ -58,9 +58,9 @@ After inference, the generated prediction results will be stored at `\output` fo
 ## Step 4. Evaluation
 Then you can calculate three metrics by running
 ```ruby
-./scripts/eval_avgJGA.sh
-./scripts/eval_FWT.sh
-./scripts/eval_BWT.sh
+./eval_avgJGA.py
+./eval_FWT.py
+.//eval_BWT.py
 ```
 
 
