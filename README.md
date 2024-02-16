@@ -60,7 +60,7 @@ Then you can calculate three metrics by running
 ```ruby
 ./eval_avgJGA.py
 ./eval_FWT.py
-.//eval_BWT.py
+./eval_BWT.py
 ```
 
 
