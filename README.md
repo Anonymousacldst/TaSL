@@ -20,7 +20,7 @@ For the four different backbone models, you can download they from the following
 Then replace the corresponding files in the Transformers package with `trainer.py` and `trainer_seq2seq.py`, which have modified the source code to add our importance-aware skill localization method.
 
 
-## Step 2. Training Stage
+## Step 2. Training
 We conducted experiments on four different student models:
 ### LLaMA-7B (`finetune_ContinualDST_LLaMA7B.py`)
 ```ruby
