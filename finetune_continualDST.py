@@ -40,7 +40,7 @@ from utils.dataset_order import get_dataset_order
 
 def train(
     # model/data params
-    base_model: str = "/home/data2/yujie/llama-7b-hf",  # the only required argument
+    base_model: str = "/llama-7b-hf",  # the only required argument
     data_path: str = "yahma/alpaca-cleaned",
     output_dir: str = "./lora-alpaca",
     # training hyperparams

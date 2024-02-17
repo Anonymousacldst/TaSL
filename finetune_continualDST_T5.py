@@ -94,7 +94,7 @@ def main(args):
     if data_path.endswith(".json") or data_path.endswith(".jsonl"):
         data_files = {}
         data_files["train"] = data_path
-        raw_datasets = load_dataset("json", data_files=data_files,cache_dir="/home/data2/yujie/cache")
+        raw_datasets = load_dataset("json", data_files=data_files)
 
     else:
         print("error")
